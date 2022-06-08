@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP POO - Exemplo 1</title>
+    <title>Exercício de fixação PHH POO</title>
 </head>
 <body>
-    <h1>PHH POO - Exemplo 1</h1>
+    <h1>Atividade de Fixação</h1>
     <hr>
 
-    <h2> Assuntos Abordados: </h2>
-    <ul>
-        <li>Criação de Classes</li>
-        <li>Importação do arquivo de classe</li>
-        <li>Criação de Objeto</li>
-    </ul>
 
 <?php 
 //Importando a Classe
-require_once "src/Cliente.php";
+require_once "src/Livro.php";
 
 //Criação dos objetos
-$clienteA = new Cliente;
-$clienteB = new Cliente;
+$livroA = new Livro;
+$livroB = new Livro;
+
+// Atribuindo dados às propriedades do objeto
+$livroA->setTitulo("Senhor dos Anéis - A sociedade do Anel");
+$livroA->setAutor("J.R.R. Tolkie");
+$livroA->setPaginas (525);
+
+$livroB->setTitulo("Jogos Vorazes - Em chamas");
+$livroB->setAutor("Suzanne Collins");
+$livroB->setPaginas(423);
+
+
 ?>
 
-<pre> <?=var_dump($clienteA, $clienteB)?></pre>
+<h2>Lista de Livros</h2>
+<h3> <?= $livroA->getTitulo() ?> </h3>
+<p> Autor: <?= $livroA->getAutor() ?> </p>
+<p> <?= $livroA->getPaginas() ?> paginas  </p>
+
+<h3> <?= $livroB->getTitulo() ?> </h3>
+<p> Autor: <?= $livroB->getAutor() ?> </p>
+<p> <?= $livroB->getPaginas() ?> paginas </p>
+
+
+<!-- <pre> <?=var_dump($livroA, $livroB)?></pre> -->
 </body>
 </html>
