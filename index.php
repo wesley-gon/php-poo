@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP POO - Exemplo 1</title>
+    <title>Exemplo 5</title>
 </head>
 <body>
-    <h1>PHH POO - Exemplo 1</h1>
+    <h1>PHP POO - Exemplo 5</h1>
     <hr>
-
-    <h2> Assuntos Abordados: </h2>
+    <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Criação de Classes</li>
-        <li>Importação do arquivo de classe</li>
-        <li>Criação de Objeto</li>
+        <li>Herança</li>
     </ul>
+<?php
+// Importando a classe
+require_once "src/Cliente.php"; // superclasse
+require_once "src/PessoaFisica.php"; // subclasse
 
-<?php 
-//Importando a Classe
-require_once "src/Cliente.php";
-
-//Criação dos objetos
-$clienteA = new Cliente;
-$clienteB = new Cliente;
+$clientePF = new PessoaFisica;
+$clientePF->setNome('Wesley');
+$clientePF->setEmail('Wesley@gmail.com');
+$clientePF->setSenha('123abc');
+$clientePF->setCpf('123.456.789-00');
+$clientePF->setIdade(35);
 ?>
 
-<pre> <?=var_dump($clienteA, $clienteB)?></pre>
+<pre> <?=var_dump($clientePF)?> </pre>
+
+
 </body>
 </html>
