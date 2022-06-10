@@ -22,7 +22,7 @@ $livroB = new Livro;
 // Atribuindo dados às propriedades do objeto
 $livroA->setTitulo("Senhor dos Anéis - A sociedade do Anel");
 $livroA->setAutor("J.R.R. Tolkie");
-$livroA->setPaginas (525);
+$livroA->setPaginas (1050);
 
 $livroB->setTitulo("Jogos Vorazes - Em chamas");
 $livroB->setAutor("Suzanne Collins");
