@@ -1,4 +1,6 @@
 <?php
+/* Classes bastratas NÃO PODEM SER INSTANCIADAS. Ou seja, n]ão é possível criar um objeto/variável a partir dsta clase */
+
 class Cliente {
     private string $nome;
     private string $email;
