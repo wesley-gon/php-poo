@@ -82,5 +82,29 @@ public function setPaginas(int $paginas) {
 
         return $this;
     }
+
+    /**
+     * Get the value of paginas
+     *
+     * @return int
+     */
+    public function getPaginas(): int
+    {
+        return $this->paginas;
+    }
+
+    /**
+     * Set the value of paginas
+     *
+     * @param int $paginas
+     *
+     * @return self
+     */
+    public function setPaginas(int $paginas): self
+    {
+        $this->paginas = $paginas;
+
+        return $this;
+    }
 }
 
