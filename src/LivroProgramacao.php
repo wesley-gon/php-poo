@@ -1,6 +1,5 @@
 <?php
-require_once "Livro.php";
-require_once "Livro.Tecnico.php";
+require_once "LivroTecnico.php";
 
 class LivroProgramacao extends LivroTecnico{
     private string $area;

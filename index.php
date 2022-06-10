@@ -15,9 +15,13 @@
 //Importando a Classe
 
 require_once "src/LivroProgramacao.php";
+require_once "src/LivroDidatico.php";
 
 //Criação dos objetos
-$livroProgramacao = $livroTecnico = new Livrotecnico;
+$livroTecnico = new LivroTecnico;
+$livroProgramacao = new LivroProgramacao;
+$livroDidatico = new LivroDidatico;
+
 
 
 
@@ -29,9 +33,16 @@ $livroTecnico->setFormato(["Fisico"]);
 
 $livroProgramacao->setTitulo("HTM e CSS");
 $livroProgramacao->setAutor("Maljor");
-$livroProgramcao->setFormato(["Fisico"]);
-$livroProgramcao->setArea("Web");
+$livroProgramacao->setFormato(["Fisico"]);
+$livroProgramacao->setArea("Web");
+
+$livroDidatico->setTitulo("HTM e CSS");
+$livroDidatico->setAutor("Maljor");
+$livroDidatico->setFormato(["Fisico", "digital"]);
+$livroDidatico->setDisciplina("Matemática");
+$livroDidatico->setNivel(["Superior"]);  
 ?>
+
 
 <h2>Lista de Livros</h2>
 <h3> <?= $livroTecnico->getTitulo() ?> </h3>
@@ -44,9 +55,18 @@ $livroProgramcao->setArea("Web");
 <p> Autor: <?= $livroProgramacao->getAutor() ?> </p>
 <p> <?= $livroProgramacao->getPaginas() ?> paginas  </p>
 <p> <?= $livroProgramacao->getFormato() ?></p>
-<p> <?= $livroProgramacao->getArea() ?></p>
+<p> Área:  <?= $livroProgramacao->getArea() ?></p>
 
 
-<!-- <pre> <?=var_dump($livroProgramacao)?></pre> -->
+<h3> <?= $livroDidatico->getTitulo() ?> </h3>
+<p> Autor: <?= $livroDidatico->getAutor() ?> </p>
+<p> <?= $livroDidatico->getPaginas() ?> paginas  </p>
+<p> <?= $livroDidatico->getFormato() ?></p>
+<p> <?= $livroDidatico->getDisciplina() ?></p>
+<p> <?= $livroDidatico->getNivel() ?></p>
+
+
+
+<!-- <pre> <?=var_dump($livroDidatico)?></pre> -->
 </body>
 </html>
