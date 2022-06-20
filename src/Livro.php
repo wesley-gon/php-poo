@@ -1,4 +1,5 @@
 <?php
+namespace Biblioteca;
 class Livro {
     // Propriedaes (ou Atributos)
     private string $titulo;

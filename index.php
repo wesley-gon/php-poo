@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício de fixação PHH POO</title>
+    <title>Exercício Desafio</title>
 </head>
 <body>
-    <h1>Atividade de Fixação 2</h1>
+    <h1>Atividade desafio</h1>
+    <h1> </h1>
     <hr>
 
 
 <?php 
-//Importando a Classe
+/* Require do autoload de classes  */
+require_once "vendor/autoload.php";
 
-require_once "src/LivroProgramacao.php";
-require_once "src/LivroDidatico.php";
+$request = new Biblioteca\Livro();
+
+/* é possível usar o "use Exercicios\{ todas as clares}" cmo se fosse uma matriz do namespace, e dai tu chama só o nome da classe   */
+
 
 //Criação dos objetos
-$livroTecnico = new LivroTecnico;
-$livroProgramacao = new LivroProgramacao;
-$livroDidatico = new LivroDidatico;
+$livroTecnico = new Biblioteca\LivroTecnico;
+$livroProgramacao = new Biblioteca\LivroProgramacao;
+$livroDidatico = new Biblioteca\LivroDidatico;
 
+$LivroWeb = new Biblioteca\Web;
 
 
 

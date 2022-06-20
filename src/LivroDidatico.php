@@ -1,5 +1,5 @@
 <?php
-require_once "LivroTecnico.php";
+namespace Biblioteca;
 
 class LivroDidatico extends LivroTecnico{
     private string $disciplina;
